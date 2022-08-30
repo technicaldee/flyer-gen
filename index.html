@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script defer src="assets/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+    <script defer src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <title>Vite App</title>
+    <link rel="stylesheet" href="/assets/index.cf8acae2.css">
+  </head>
+  <body class="bg-gray-100 text-black">
+    <header>
+      <nav class="bg-white text-black border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+          <a href="/" class="flex items-center">
+              <p class="self-center text-xl font-semibold whitespace-nowrap dark:text-white text-black" style="color: black">CDMA</p>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="block md:max-w-3xl my-8 bg-white lg:max-w-3xl mx-auto p-6 overflow-hidden">
+      <article>
+        <div class="mx-auto my-3 w-96 h-96 p-1" style="background-image: linear-gradient(to right,blue, purple);">
+          <img src="https://actonncds.org/themes/custom/gw4a2023/logo-act_on_ncds-community-en-gradient_shadow.png" class="w-16 h-16" />
+          
+          <!-- Caption -->
+          <div class="px-5 pt-4 pb-8 w-10/12 text-xs -skew-y-12 h-40 text-white;" style="background-image: linear-gradient(to right, purple, blue); font-family: cursive; z-index: 1; color: white; word-wrap: break-word;" id="messageDiv">Your Message</div>
+
+          <!-- Arrow -->
+          <p class="-skew-y-12"><i class="arrow"></i>
+          </p>
+
+          <!-- Avatar -->
+          <div class="flex items-center">
+            <!-- Left -->
+            <div>
+              <div class="-skew-y-12 h-20 w-20 img-a">
+                <img src="/img.png" id="imgDiv" />
+              </div>
+              <p class="-skew-y-12 text-green-300 font-semibold img-p" style="font-family: cursive">#ActOnNCDs</p>
+            </div>
+
+            <!-- Right -->
+            <div class="ml-1 text-xs a-txt">
+              <p class="font-semibold" style="font-family: cursive" id="nameDiv">Your Name</p>
+              <p>NCDS ADVOCATE</p>
+              <p id="cityDiv">City</p>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <div class="mb-6">
+        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">Your Photo</label>
+        <input id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" type="file">
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
+      </div>
+      <div class="mb-6">
+        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
+        <input id="name" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Name" required onkeyup="setName()">
+      </div>
+
+      <div class="mb-6">
+        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your City</label>
+        <input id="city" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your City" required onkeyup="setCity()">
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+        <textarea maxlength="230" id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a message... Maximum 230 chars" onkeyup="setMessage()"></textarea>
+      </div>
+
+      <button onclick="makeImage()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 -ml-1 w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        
+        Download now
+      </button>
+
+    </main>
+  </body>
+</html>
