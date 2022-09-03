@@ -7,6 +7,9 @@ function setName(){
 function setCity(){
   document.getElementById('cityDiv').innerText = document.getElementById('city').value;
 }
+function setProf(){
+  document.getElementById('profDiv').innerText = document.getElementById('prof').value;
+}
 
 document.getElementById('image').onchange=function(evt){
   var tgt = evt.target || window.event.srcElement,

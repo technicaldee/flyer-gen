@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="assets/index.js"></script>
+    <script defer src="src/index.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
     <script type="module" defer src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
     
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index.7a991a0b.js"></script>
-    <link rel="stylesheet" href="/assets/index.72fa08e6.css">
+    <title> CDMA </title>
+    <script type="module" crossorigin src="assets/index.7a991a0b.js"></script>
+    <link rel="stylesheet" href="assets/index.e72b9963.css">
   </head>
   <body class="bg-gray-100 text-black">
     <header>
@@ -42,15 +42,15 @@
           </p> -->
 
           <!-- Avatar -->
-          <div class="flex items-center justify-between">
+          <div class="flex items-center mt-1 justify-between">
             <!-- Left -->
-            <div>
+            <div class="flex flex-end">
               <div class="rounded-t-lg h-20 w-20 img-a">
-                <img src="/img.png" id="imgDiv" />
+                <img src="img.png" id="imgDiv" />
               </div>
-              <div class="ml-1 text-xs a-txt">
+              <div class="ml-1 text-xs">
                 <p class="font-semibold" style="font-family: cursive" id="nameDiv">Your Name</p>
-                <!-- <p>NCDS ADVOCATE</p> -->
+                <p id="profDiv">Profession</p>
                 <p id="cityDiv">City</p>
               </div>
             </div>
@@ -76,6 +76,11 @@
       <div class="mb-6">
         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your City</label>
         <input id="city" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your City" required onkeyup="setCity()">
+      </div>
+
+      <div class="mb-6">
+        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Profession</label>
+        <input id="prof" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Profession" required onkeyup="setProf()">
       </div>
 
       <div class="mb-6">
