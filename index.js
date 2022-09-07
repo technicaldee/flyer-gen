@@ -30,8 +30,18 @@ document.getElementById('image').onchange=function(evt){
   }
 }
 
-
 function makeImage(){
+  domtoimage.toJpeg(document.querySelector('article'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'cdma-flyer.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
+}
+
+
+function makeImage2(){
   const img = document.querySelector('article').innerHTML;
   const json = {
       html: img,
